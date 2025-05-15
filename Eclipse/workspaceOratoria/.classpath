@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ejemploProyecto/src/main/java"/>
+	<classpathentry kind="lib" path="ejemploProyecto/target/ejemplo/WEB-INF/lib/mysql-connector-java-8.0.29.jar"/>
+	<classpathentry kind="lib" path="ejemploProyecto/target/ejemplo/WEB-INF/lib/protobuf-java-3.19.4.jar"/>
+	<classpathentry kind="output" path="ejemploProyecto/target/classes"/>
+</classpath>

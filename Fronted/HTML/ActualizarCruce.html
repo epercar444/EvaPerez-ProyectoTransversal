@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Actualizar Cruce</title>
+    <link rel="stylesheet" th:href="@{/CSS/RegistroPuntuaciones.css}" />
+</head>
+<body>
+<header>
+        <a href="https://blogsaverroes.juntadeandalucia.es/iestorrredelosguzmanes/" target="_blank">
+           <img th:src="@{/Fotos/logo.svg}"  alt="Logotipo Instituto" id="logo">
+        </a>
+     <div class="fondo" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/oratoria/Fotos/instituto.jpg') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: -1;">
+	</div>
+        <h1>Torneo de debate</h1>
+        <div class="contenedorBotonInicio">
+            <button onclick="goHome()">Inicio</button>
+            <button onclick="window.location.href='/oratoria/oratoria/PaginaBase'">Atrás</button> 
+        </div>
+    </header>
+
+<main style="max-width: 600px; margin: 3rem auto; background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+    <h2 style="text-align: center; margin-bottom: 2rem; color: #2d97d0;">Actualizar datos del Cruce</h2>
+    
+    <form method="post" action="ActualizarCruce">
+        <div style="margin-bottom: 1.5rem;">
+            <label for="idcruce" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">ID Cruce:</label>
+            <input type="number" id="idcruce" name="idcruce" required 
+                   style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+            <label for="dato" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Dato a actualizar:</label>
+            <input type="text" id="dato" name="dato" required 
+                   style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+            <label for="nuevoDato" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nuevo valor:</label>
+            <input type="text" id="nuevoDato" name="nuevoDato" required 
+                   style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" 
+                    style="padding: 0.6rem 1.5rem; background-color: #2d97d0; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
+                Actualizar
+            </button>
+        </div>
+    </form>
+
+    <div th:if="${mensaje != null}" style="margin-top: 2rem; text-align: center; color: green; font-weight: bold;">
+        <p th:text="${mensaje}"></p>
+    </div>
+</main>S
+        <script>
+        function goHome() {
+            window.location.href = "/oratoria/oratoria/indexE";
+        }
+    </script>
+</body>
+</html>

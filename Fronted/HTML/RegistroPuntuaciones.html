@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" th:href="@{/CSS/RegistroPuntuaciones.css}">
+</head>
+
+<body>
+     <header>
+        <a href="https://blogsaverroes.juntadeandalucia.es/iestorrredelosguzmanes/" target="_blank">
+           <img th:src="@{/Fotos/logo.svg}"  alt="Logotipo Instituto" id="logo">
+        </a>
+     <div class="fondo" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/oratoria/Fotos/instituto.jpg') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: -1;">
+	</div>
+        <h1>Torneo de debate</h1>
+        <div class="contenedorBotonInicio">
+            <button onclick="goHome()">Inicio</button>
+            <button onclick="window.location.href='PaginaBase'">Atrás</button> 
+        </div>
+    </header>
+    
+<main style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:15px;width:60%;height:52%;padding:40px 20px;background-color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    <h2 style="margin-bottom: 20px; color: black; font-size: 36px; font-weight: bold; font-style: Roboto;color:#2d97d0;">Registrar Puntuación</h2>
+    <form method="post" action="registrarPuntuacion" style="width: 100%; display: flex; flex-direction: column; gap: 15px;">
+        
+        <div>
+            <label for="idequipo1">idEquipo1:</label>
+            <input type="number" id="idequipo1" name="idequipo1" required>
+        </div>
+
+        <div>
+            <label for="idequipo2">idEquipo2:</label>
+            <input type="number" id="idequipo2" name="idequipo2" required>
+        </div>
+
+        <div>
+            <label for="puntuacion1">puntuacionEquipo1:</label>
+            <input type="number" id="puntuacion1" name="puntuacion1" required>
+        </div>
+
+        <div>
+            <label for="puntuacion2">puntuacionEquipo2:</label>
+            <input type="number" id="puntuacion2" name="puntuacion2" required>
+        </div>
+
+        <div>
+            <label for="observacion1">observacionEquipo1:</label>
+            <input type="text" id="observacion1" name="observacion1">
+        </div>
+
+        <div>
+            <label for="observacion2">observacionEquipo2:</label>
+            <input type="text" id="observacion2" name="observacion2">
+        </div>
+
+        <div>
+            <label for="penalizacion1">penalizaciónEquipo1:</label>
+            <input type="text" id="penalizacion1" name="penalizacion1">
+        </div>
+
+        <div>
+            <label for="penalizacion2">penalizaciónEquipo2:</label>
+            <input type="text" id="penalizacion2" name="penalizacion2">
+        </div>
+
+        <div>
+            <label for="idprueba">idPrueba:</label>
+            <input type="number" id="idprueba" name="idprueba" required>
+        </div>
+
+        <div>
+            <label for="fase">Fase:</label>
+            <select name="fase" id="fase" required>
+                <option value="PrimeraFase">PrimeraFase</option>
+                <option value="SegundaFase">SegundaFase</option>
+                <option value="Semifinal">Semifinal</option>
+                <option value="Final">Final</option>
+            </select>
+        </div>
+
+<button type="submit" style="margin-top: 20px; margin-bottom: 20px; border-radius: 15px; font-size: 15px; width: 60%; background-color: #2d97d0; color: white; padding: 10px 0; border: none; display: block; margin-left: auto; margin-right: auto;">
+    Registrar Puntuación
+</button>
+    </form>
+</main>
+
+        <script>
+        function goHome() {
+            window.location.href = "indexE";
+        }
+    </script>
+</body>
+</html>
